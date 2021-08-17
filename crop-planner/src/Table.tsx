@@ -52,7 +52,7 @@ export default class Table extends PureComponent<Props, State> {
 
       {sortBy(field.crops, crop => crop.year).map(seasonalCrop => this.renderCropCell(field, seasonalCrop))}
 
-      <div className="table__cell table__cell--right">--</div>
+      <div className="table__cell table__cell--right">{field.balance}</div>
     </div>
 
   renderCropCell = (field: Field, seasonalCrop: SeasonalCrop) =>
